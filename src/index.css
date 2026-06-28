@@ -1,0 +1,11 @@
+html,
+body,
+#root {
+ --page-bg:
+    radial-gradient(
+      circle at 35% 10%,
+      rgba(49, 79, 96, 0.35),
+      transparent 60%
+    ),
+    #0b0f14;
+}
