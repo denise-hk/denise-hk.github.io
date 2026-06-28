@@ -151,7 +151,7 @@ function App() {
 
                   <div className="about-media">
                     <img
-                      src="/gifs/FredsEscape-4.gif"
+                      src="/gifs/FredsEscape-2.gif"
                       alt="Gameplay preview"
                     />
                   </div>
