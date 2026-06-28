@@ -10,7 +10,7 @@ const projects = [
     technical:
       "Built with C++ and Raylib. I worked on player movement, collision detection, enemy behavior, game states, UI, and the visual damage mechanic.",
     tags: ["C++", "Raylib", "2D Game", "Collision", "Game States"],
-    playLink: "#",
+    playLink: "",
     githubLink: "https://github.com/Forsbergs-Skola/Raylib-Game.git",
     gifs: [
       "/gifs/stayUnique-start.gif",
