@@ -30,6 +30,11 @@ html,
 body {
   overflow-x: hidden;
 }
+html.panel-open,
+body.panel-open {
+  overflow: hidden !important;
+  height: 100%;
+}
 
 body {
   margin: 0;

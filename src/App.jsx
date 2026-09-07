@@ -107,18 +107,19 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeProfile, setActiveProfile] = useState(null);
   useEffect(() => {
-    if (selectedProject) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-    }
+  if (selectedProject) {
+    document.documentElement.classList.add("panel-open");
+    document.body.classList.add("panel-open");
+  } else {
+    document.documentElement.classList.remove("panel-open");
+    document.body.classList.remove("panel-open");
+  }
 
-    return () => {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-    };
-  }, [selectedProject]);
+  return () => {
+    document.documentElement.classList.remove("panel-open");
+    document.body.classList.remove("panel-open");
+  };
+}, [selectedProject]);
 
   const currentProjectIndex = selectedProject
   ? projects.findIndex((project) => project.title === selectedProject.title) : -1;
