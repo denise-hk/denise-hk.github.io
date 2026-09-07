@@ -69,6 +69,7 @@ const projects = [
 
 function GifGallery({ project }) {
   const [index, setIndex] = useState(0);
+  useEffect(() => {setIndex(0);}, [project]);
   const gifs = project.gifs || [];
 
   if (gifs.length === 0) {
@@ -110,10 +111,12 @@ function App() {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     }
 
     return () => {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [selectedProject]);
 
@@ -340,7 +343,7 @@ function App() {
                 <p className="status">{selectedProject.status}</p>
               )}
 
-              <GifGallery project={selectedProject} />
+              <GifGallery key={selectedProject.title} project={selectedProject} />
 
               <p>{selectedProject.description}</p>
 
